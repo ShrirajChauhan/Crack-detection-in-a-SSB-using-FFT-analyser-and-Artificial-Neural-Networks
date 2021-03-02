@@ -42,13 +42,13 @@ model=tf.keras.Sequential([
 # compiling the model using loss and optimizer
 model.compile(optimizer=tf.keras.optimizers.Adam(0.1),loss=tf.keras.losses.mean_squared_error)
 
-
+# we fit the model four different times to predict cd1, cd2, cl1, cl2 individually
 #model.fit(x_train,cd1_train,epochs=1000,validation_split=0.2)
 model.fit(x_train,cd2_train,epochs=10000,validation_split=0.2)
 #model.fit(x_train,cl1_train,epochs=1000,validation_split=0.2)
 #model.fit(x_train,cl2_train,epochs=1000,validation_split=0.2)
 
-
+#and filnally we predict the crack locations and crack depths 
 pradict=np.asarray([[0.9519,0.9577,0.954]])
 print(model.predict(pradict))
 
