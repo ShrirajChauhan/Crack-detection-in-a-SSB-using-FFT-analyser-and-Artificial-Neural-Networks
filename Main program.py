@@ -3,7 +3,7 @@ import tensorflow as tf
 import numpy as np
 
 # Loading and filtering data
-raw_data = open('New Text Document.txt','r')
+raw_data = open('Raw data.txt','r')
 lines = raw_data.readlines()
 X=[]
 CD1=[]
@@ -20,7 +20,7 @@ for line in lines:
     CL2.append(cl2)
 
 #visualizing data
-#print(X,CD1,CD2,CL1,CL2)
+print(X,CD1,CD2,CL1,CL2)
 
 # Converting data into numpy arrays
 x_train=np.asarray(X)
